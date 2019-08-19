@@ -34,7 +34,7 @@
 - has_many :users, through: :group_users
 
 
-## coments_テーブル
+## message_テーブル
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|

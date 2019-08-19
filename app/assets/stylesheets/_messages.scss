@@ -1,0 +1,128 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+header {
+  background-color: #38AEF0;
+  height: 22px;
+  width: 100%;
+}
+
+
+.contents {
+  background-color: white;
+  height: 100%;
+  margin: auto;
+  display: flex;
+
+  &__left {
+    height: calc(100vh - 96px);
+    width: 300px;
+    z-index: 10;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      background-color:#253141;
+      height: 96px;
+      width: 100%;
+      z-index: 30;
+      
+      &__menu{
+        display: flex;
+        color: white;
+        margin: 40px 10px;
+      }
+      &__user-name{
+        color: #FFFFFF;
+        font-size: 16px;
+        margin: 40px 0 40px 40px;
+      }
+
+    }
+  
+    &__group-box{
+      background-color: #2f3e51;
+      height: 100%;
+      width: 100%;
+      position: relative;
+      display: flex;
+      &__group-name{
+        color: #FFFFFF;
+        position: absolute;
+        margin: 20px 0 5px 20px;
+      }
+      &__latest-message{
+        color: #FFFFFF;
+        position: absolute;
+        font-size: 11px;
+        padding: 40px 0 40px 20px;
+      }
+    }
+  }
+  
+  &__right {
+    background-color:#fafafa;
+    position: relative;
+    height: 100%;
+    width: calc(100vw - 300px);
+    &__header{
+      background-color:white;
+      height: 96px;
+      width: 100%;
+      position: relative;
+      display: flex;
+      &__group-name{
+        margin: 35px 0 27px 40px;
+        color: #333333;
+        font-size: 20px;
+      }
+      &__edit-btn{
+        height: 40px;
+        line-height: 40px;
+        padding: 0 20px;
+        margin-top: 30px;
+        border: solid 1px #38aef0;
+        position: absolute;
+        right: 40px;
+      }
+      &__member-list{
+        font-size: 12px;
+        color: #999999;
+        margin-top:75px;
+        margin-left: 40px;
+        position: absolute;
+      }
+    }
+    &__footer {
+      height: 90px;
+      position: absolute;
+      background-color: grey;
+      width: 100%;
+      bottom: 0;
+      display: flex;
+      &__message_type{
+        height: 50px;
+        width: 100%;
+        background-color: white;
+        margin: 20px 10px 20px 40px;
+        color:434A54;
+        font-size :16px;
+        line-height:50px;
+        padding: 0 10px;
+      }
+      &__upper-info{
+        height: 50px;
+        background-color: #38AEF0;
+        margin: 20px 40px 20px 15px;
+        font-size:20px;
+        color:white;
+        line-height:50px;
+        padding:0 20px
+      }
+    }
+  }
+}
