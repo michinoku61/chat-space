@@ -41,25 +41,29 @@ header {
         font-size: 16px;
         margin: 40px 0 40px 40px;
       }
-
     }
-  
     &__group-box{
+      position: relative;
       background-color: #2f3e51;
       height: 100%;
       width: 100%;
-      position: relative;
-      display: flex;
-      &__group-name{
+      overflow: scroll;
+      &__group{
+      height: 90px;
+      width: 300px;
+      padding: 20px 0 20px 0;
+        &__name{
         color: #FFFFFF;
-        position: absolute;
-        margin: 20px 0 5px 20px;
-      }
-      &__latest-message{
+        font-size: 15px;
+        display: block;
+        margin-left: 40px;     
+        }
+        &__message{
         color: #FFFFFF;
-        position: absolute;
         font-size: 11px;
-        padding: 40px 0 40px 20px;
+        display: block;
+        margin-left: 40px;
+        }
       }
     }
   }
