@@ -107,16 +107,27 @@ header {
       background-color: grey;
       width: 100%;
       bottom: 0;
-      display: flex;
-      &__message_type{
+      // display: flex;
+
+
+      
+      .form__message{
         height: 50px;
         width: 100%;
         background-color: white;
-        margin: 20px 10px 20px 40px;
+        margin: 20px 0px 20px 40px;
         color:434A54;
         font-size :16px;
         line-height:50px;
         padding: 0 10px;
+      }
+
+      &__image_btm{
+          height: 50px;
+          width: 40px;
+          margin: 20px 0px 20px 0px;
+          line-height:50px;
+          background-color: white;
       }
       &__upper-info{
         height: 50px;
@@ -130,3 +141,49 @@ header {
     }
   }
 }
+;
+.contents__right__footer__image{
+  display: flex
+}
+
+.hidden{
+  display: none;
+}
+
+.contents__right__center{
+  height: calc(100vh - 190px);
+  padding: 46px 40px;
+  background-color: #fafafa;
+  overflow: scroll;
+}
+
+.contents__right__center__upper_box{
+  padding-bottom: 20px;
+  display: flex;
+  &__name{
+    color: #434a54;
+    font-size: 16px;
+    font-weight: bold;
+  
+  }
+  &__date{
+    color: #999999;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  &__message{
+    color: #434a54;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  &__src{
+    border: 0;
+  }
+  
+}
+
+.contents__right__center__down_box{
+  padding-bottom: 40px;
+}
+
+

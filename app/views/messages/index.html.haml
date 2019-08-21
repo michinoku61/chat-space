@@ -1,33 +1,24 @@
 .contents
-  .contents__left
-    .contents__left__header
-      %h3.contents__left__header__user-name
-        = current_user.name
-      %ul.contents__left__header__menu
-        %li.contents__left__header__menu_icon
-          = link_to new_group_path do
-            =fa_icon 'edit', class: 'icon'
-        %li.contents__left__header__menu_icon
-          = link_to edit_user_path(current_user) do
-            = fa_icon 'cog', class: 'icon'      
-    .contents__left__group-box
-      - current_user.groups.each do |group|
-        = link_to group_messages_path(group) do
-          .contents__left__group-box__group
-            %span.contents__left__group-box__group__name 
-              = group.name
-            %span.contents__left__group-box__group__message
-              メッセージはまだありません。
+  = render 'devise/shared/side_bar'
   .contents__right
     .contents__right__header
       %h1.contents__right__header__group-name
-        Aグループ
+        = @group.name
       .contents__right__header__edit-btn
         Edit
       %ul.contents__right__header__member-list
-        aaaaaaaaa
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
+    .contents__right__center
+      = render @messages
+      /renderで呼び出される部分
+    
     .contents__right__footer
-      .contents__right__footer__message_type
-        type a message
-      .contents__right__footer__upper-info
-        Send
+      = form_for [@group, @message] do |f|
+        .contents__right__footer__image
+          = f.text_field :content, class: 'form__message', placeholder: 'type a message'      
+          = f.label :image, class: 'contents__right__footer__image_btm' do
+            = fa_icon 'image', class: 'icon'
+            = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'contents__right__footer__upper-info'
+        
