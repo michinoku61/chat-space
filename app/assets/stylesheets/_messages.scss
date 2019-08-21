@@ -41,25 +41,29 @@ header {
         font-size: 16px;
         margin: 40px 0 40px 40px;
       }
-
     }
-  
     &__group-box{
+      position: relative;
       background-color: #2f3e51;
       height: 100%;
       width: 100%;
-      position: relative;
-      display: flex;
-      &__group-name{
+      overflow: scroll;
+      &__group{
+      height: 90px;
+      width: 300px;
+      padding: 20px 0 20px 0;
+        &__name{
         color: #FFFFFF;
-        position: absolute;
-        margin: 20px 0 5px 20px;
-      }
-      &__latest-message{
+        font-size: 15px;
+        display: block;
+        margin-left: 40px;     
+        }
+        &__message{
         color: #FFFFFF;
-        position: absolute;
         font-size: 11px;
-        padding: 40px 0 40px 20px;
+        display: block;
+        margin-left: 40px;
+        }
       }
     }
   }
@@ -103,16 +107,27 @@ header {
       background-color: grey;
       width: 100%;
       bottom: 0;
-      display: flex;
-      &__message_type{
+      // display: flex;
+
+
+      
+      .form__message{
         height: 50px;
         width: 100%;
         background-color: white;
-        margin: 20px 10px 20px 40px;
+        margin: 20px 0px 20px 40px;
         color:434A54;
         font-size :16px;
         line-height:50px;
         padding: 0 10px;
+      }
+
+      &__image_btm{
+          height: 50px;
+          width: 40px;
+          margin: 20px 0px 20px 0px;
+          line-height:50px;
+          background-color: white;
       }
       &__upper-info{
         height: 50px;
@@ -126,3 +141,49 @@ header {
     }
   }
 }
+;
+.contents__right__footer__image{
+  display: flex
+}
+
+.hidden{
+  display: none;
+}
+
+.contents__right__center{
+  height: calc(100vh - 190px);
+  padding: 46px 40px;
+  background-color: #fafafa;
+  overflow: scroll;
+}
+
+.contents__right__center__upper_box{
+  padding-bottom: 20px;
+  display: flex;
+  &__name{
+    color: #434a54;
+    font-size: 16px;
+    font-weight: bold;
+  
+  }
+  &__date{
+    color: #999999;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  &__message{
+    color: #434a54;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  &__src{
+    border: 0;
+  }
+  
+}
+
+.contents__right__center__down_box{
+  padding-bottom: 40px;
+}
+
+
