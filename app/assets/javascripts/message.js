@@ -32,7 +32,6 @@ $('.js-form').on('submit', function(e){
       contentType: false
     })
     .done(function(data){
-      console.log(data)
       let html = buildHTML(data);
       $('.contents__right__center').append(html);
       $('.contents__right__center').animate({scrollTop: $('.contents__right__center')[0].scrollHeight}, 'fast');   
