@@ -159,7 +159,6 @@ header {
 
 .contents__right__center__upper_box{
   padding-bottom: 20px;
-  display: flex;
   &__name{
     color: #434a54;
     font-size: 16px;
@@ -184,6 +183,7 @@ header {
 
 .contents__right__center__down_box{
   padding-bottom: 40px;
+  padding-top: 20px;
 }
 
 

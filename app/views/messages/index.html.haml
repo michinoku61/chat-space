@@ -14,7 +14,7 @@
       /renderで呼び出される部分
     
     .contents__right__footer
-      = form_for [@group, @message] do |f|
+      = form_for [@group, @message], html:{class: "js-form"} do |f|
         .contents__right__footer__image
           = f.text_field :content, class: 'form__message', placeholder: 'type a message'      
           = f.label :image, class: 'contents__right__footer__image_btm' do
