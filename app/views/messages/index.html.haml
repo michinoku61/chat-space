@@ -5,7 +5,8 @@
       %h1.contents__right__header__group-name
         = @group.name
       .contents__right__header__edit-btn
-        Edit
+        =link_to "edit", class: "edit-btn" do
+          Edit
       %ul.contents__right__header__member-list
         - @group.group_users.each do |group_user|
           = group_user.user.name
