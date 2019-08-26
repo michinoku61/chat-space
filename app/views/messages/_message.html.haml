@@ -1,10 +1,10 @@
 .contents__right__center__upper_box{data: {message_id: message.id}}
-  %span.name 
+  %span.name
     = message.user.name
   %span.date
     = message.created_at.strftime("%Y/%m/%d %H:%M") 
   .contents__right__center__down_box
     - if message.content.present?
-      %p.message 
+      %p.message
         = message.content
     = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
