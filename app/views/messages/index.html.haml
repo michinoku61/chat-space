@@ -10,10 +10,10 @@
       %ul.contents__right__header__member-list
         - @group.group_users.each do |group_user|
           = group_user.user.name
-    .contents__right__center
+    .contents__right__center{data: {group_id: @group.id}}
       = render @messages
       /renderで呼び出される部分
-    
+
     .contents__right__footer
       = form_for [@group, @message], html:{class: "js-form"} do |f|
         .contents__right__footer__image

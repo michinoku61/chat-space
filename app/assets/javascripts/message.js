@@ -1,3 +1,4 @@
+$(document).on('turbolinks:load', function(){
 $(function(){
   function buildHTML(message){
     let img = message.image.url ? message.image.url :"";{
@@ -17,8 +18,11 @@ $(function(){
           </div>
         </div>`
       return html;
-    } 
+    }
   };
+
+
+
 $('.js-form').on('submit', function(e){
     e.preventDefault();
     let formData = new FormData(this);
@@ -42,5 +46,35 @@ $('.js-form').on('submit', function(e){
     });
     return false;
   });
-});
 
+  let group_id = $('.contents__right__center').data('group-id');
+
+  let reloadMessages = function(){
+    
+    if (document.URL.match(`/groups/${group_id}/messages`)){
+      console.log('ok')
+      Last_message_id = $('.contents__right__center__upper_box:last').data('message-id')
+
+      $.ajax({
+        url: `/groups/${group_id}/api/messages`,
+        type: 'GET',
+        dataType: 'json',
+        data: {id: Last_message_id}
+      })
+      .done(function(messages){
+        if (messages.length !== 0) {
+          messages.forEach(function(message){
+            let html = buildHTML(message);
+            $('.contents__right__center').append(html)
+            $('.contents__right__center').animate({scrollTop: $('.contents__right__center')[0].scrollHeight}, 'fast');
+          });
+        }
+      })
+      .fail(function(){
+        console.log('失敗')
+      });
+    }
+  }
+  setInterval(reloadMessages, 5000);
+});
+});
