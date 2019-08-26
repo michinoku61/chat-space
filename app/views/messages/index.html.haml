@@ -17,9 +17,8 @@
     .contents__right__footer
       = form_for [@group, @message], html:{class: "js-form"} do |f|
         .contents__right__footer__image
-          = f.text_field :content, class: 'form__message', placeholder: 'type a message'      
+          = f.text_field :content, class: 'form__message', placeholder: 'type a message'
           = f.label :image, class: 'contents__right__footer__image_btm' do
             = fa_icon 'image', class: 'icon'
             = f.file_field :image, class: 'hidden'
           = f.submit 'Send', class: 'contents__right__footer__upper-info'
-        

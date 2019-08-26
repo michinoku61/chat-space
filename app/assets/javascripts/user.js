@@ -4,7 +4,7 @@ $(document).on('turbolinks:load', function(){
   $(function(){
 
     let search_list = $('#user-search-result');
-    let add_menber = $('#add-menber')
+    let add_menber = $('.add-menber')
     
     function appendUser(user){
       let html =

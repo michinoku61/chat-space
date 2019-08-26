@@ -25,7 +25,29 @@
     .chat-group-form__field--left
       %label.chat-group-form__label{:for => "chat_group_チャットメンバー"} チャットメンバー
     .chat-group-form__field--right
-      #add-menber
+      .chat-group-user
+        %input{:name => "group[user_ids][]", :type => "hidden", :value => current_user.id}
+        %p.chat-group-user__name
+          - @group.users.each do |member|
+            .chat-group-user
+            %input{:name => "group[user_ids][]", :type => "hidden", :value => member.id}
+            %p.chat-group-user__name
+            = member.name
+            -unless member.id == current_user.id
+              .user-search-remove.chat-group-user__btn.chat-group-user__btn--remove.js-remove-btn 削除
+      .add-menber
+
+
+  -#     %p.chat-group-user__name ユーザー名
+  -# .user-search-add.chat-group-user__btn.chat-group-user__btn--add{"data-user-id" => "ユーザーのid", "data-user-name" => "ユーザー名"} 追加
+
+
+
+
+
+
+      
+      -# = current_user.name
 
       / この部分はインクリメンタルサーチ（ユーザー追加の非同期化のときに使用します
   .chat-group-form__field.clearfix
