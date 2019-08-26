@@ -52,7 +52,6 @@ $('.js-form').on('submit', function(e){
   let reloadMessages = function(){
     
     if (document.URL.match(`/groups/${group_id}/messages`)){
-      console.log('ok')
       Last_message_id = $('.contents__right__center__upper_box:last').data('message-id')
 
       $.ajax({
