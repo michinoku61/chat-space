@@ -23,6 +23,11 @@ header {
     height: calc(100vh - 96px);
     width: 300px;
     z-index: 10;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+
     &__header {
       display: flex;
       justify-content: space-between;
@@ -41,6 +46,7 @@ header {
         font-size: 16px;
         margin: 40px 0 40px 40px;
       }
+
     }
     &__group-box{
       position: relative;
@@ -51,12 +57,12 @@ header {
       &__group{
       height: 90px;
       width: 300px;
-      padding: 20px 0 20px 0;
+      padding: 20px 0 0 0;
         &__name{
         color: #FFFFFF;
         font-size: 15px;
         display: block;
-        margin-left: 40px;     
+        margin-left: 40px;
         }
         &__message{
         color: #FFFFFF;
@@ -67,7 +73,9 @@ header {
       }
     }
   }
-  
+  a {
+    text-decoration: none;
+  }
   &__right {
     background-color:#fafafa;
     position: relative;
@@ -84,6 +92,7 @@ header {
         color: #333333;
         font-size: 20px;
       }
+      
       &__edit-btn{
         height: 40px;
         line-height: 40px;
@@ -123,7 +132,7 @@ header {
       }
 
       &__image_btm{
-          height: 50px;
+          height: 54px;
           width: 40px;
           margin: 20px 0px 20px 0px;
           line-height:50px;
@@ -187,3 +196,7 @@ header {
 }
 
 
+.contents__left__header__menu_icon{
+  font-size: 15px;
+  margin-right: 5px
+}
