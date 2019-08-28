@@ -26,8 +26,7 @@ $(document).on('turbolinks:load', function(){
   $('.js-form').on('submit', function(e){
       e.preventDefault();
       let formData = new FormData(this);
-      let url = $(this).attr('acton');
-      console.log(formData)
+      let url = $(this).attr('action');
       $.ajax({
         url: url,
         type: "POST",
@@ -42,9 +41,9 @@ $(document).on('turbolinks:load', function(){
         $('.contents__right__center').animate({scrollTop: $('.contents__right__center')[0].scrollHeight}, 'fast');   
         $('form')[0].reset();
       })
-      // .fail(function(){
-      //   alert('error');
-      // });
+      .fail(function(){
+        alert('メッセージと画像が送信されていません');
+      });
       return false;
     });
 
