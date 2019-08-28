@@ -132,7 +132,7 @@ header {
       }
 
       &__image_btm{
-          height: 54px;
+          height: 50px;
           width: 40px;
           margin: 20px 0px 20px 0px;
           line-height:50px;
@@ -199,4 +199,8 @@ header {
 .contents__left__header__menu_icon{
   font-size: 15px;
   margin-right: 5px
+}
+
+.form__message{
+  border: none;
 }
