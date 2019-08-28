@@ -2,7 +2,7 @@ $(document).on('turbolinks:load', function(){
   $(function(){
     function buildHTML(message){
       let img = message.image.url ? message.image.url :"";{
-        let html = 
+        let html =
           `<div class="contents__right__center__upper_box" data-message-id=${message.id}>
             <span class="name">
               ${message.user_name}
@@ -26,7 +26,8 @@ $(document).on('turbolinks:load', function(){
   $('.js-form').on('submit', function(e){
       e.preventDefault();
       let formData = new FormData(this);
-      let url = $(this).attr('acton')
+      let url = $(this).attr('acton');
+      console.log(formData);
       $.ajax({
         url: url,
         type: "POST",
