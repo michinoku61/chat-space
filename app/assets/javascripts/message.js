@@ -27,7 +27,7 @@ $(document).on('turbolinks:load', function(){
       e.preventDefault();
       let formData = new FormData(this);
       let url = $(this).attr('acton');
-      console.log(formData);
+      console.log(formData)
       $.ajax({
         url: url,
         type: "POST",
@@ -42,9 +42,9 @@ $(document).on('turbolinks:load', function(){
         $('.contents__right__center').animate({scrollTop: $('.contents__right__center')[0].scrollHeight}, 'fast');   
         $('form')[0].reset();
       })
-      .fail(function(){
-        alert('error');
-      });
+      // .fail(function(){
+      //   alert('error');
+      // });
       return false;
     });
 
