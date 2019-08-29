@@ -44,7 +44,8 @@ header {
       &__user-name{
         color: #FFFFFF;
         font-size: 16px;
-        margin: 40px 0 40px 40px;
+        margin: 40px 0 40px 20px;
+        font-weight: bold;
       }
 
     }
@@ -55,20 +56,20 @@ header {
       width: 100%;
       overflow: scroll;
       &__group{
-      height: 90px;
+      height: 31px;
       width: 300px;
-      padding: 20px 0 0 0;
+      padding: 20px 0 40px 0;
         &__name{
         color: #FFFFFF;
         font-size: 15px;
         display: block;
-        margin-left: 40px;
+        margin-left: 20px;
         }
         &__message{
         color: #FFFFFF;
         font-size: 11px;
         display: block;
-        margin-left: 40px;
+        margin-left: 20px;
         }
       }
     }
