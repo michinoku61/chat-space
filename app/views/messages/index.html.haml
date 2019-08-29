@@ -8,6 +8,7 @@
         =link_to "edit", class: "edit-btn" do
           Edit
       %ul.contents__right__header__member-list
+        Member:
         - @group.group_users.each do |group_user|
           = group_user.user.name
     .contents__right__center{data: {group_id: @group.id}}

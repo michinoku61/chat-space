@@ -93,6 +93,11 @@ header {
         font-size: 20px;
       }
       
+      a {
+        color:#38aef0;
+        text-decoration: none;
+      }
+
       &__edit-btn{
         height: 40px;
         line-height: 40px;
@@ -166,33 +171,10 @@ header {
   overflow: scroll;
 }
 
-.contents__right__center__upper_box{
-  padding-bottom: 20px;
-  &__name{
-    color: #434a54;
-    font-size: 16px;
-    font-weight: bold;
-  
-  }
-  &__date{
-    color: #999999;
-    font-size: 12px;
-    margin-left: 10px;
-  }
-  &__message{
-    color: #434a54;
-    font-size: 14px;
-    margin-bottom: 30px;
-  }
-  &__src{
-    border: 0;
-  }
-  
-}
 
 .contents__right__center__down_box{
   padding-bottom: 40px;
-  padding-top: 20px;
+  padding-top: 10px;
 }
 
 
@@ -210,3 +192,38 @@ header {
     color: black;
   }
   }
+
+.contents__left__header__user-name{
+  font-size: 18px;
+  color: #FFFFFF;
+}
+
+.contents__right__footer__image_btm{
+  border: none;
+}
+
+.contents__right__footer__upper-info{
+  border: none;
+}
+
+
+  .name{
+    color: #434a54;
+    font-size: 16px;
+    font-weight: bold;
+  
+  }
+  .date{
+    color: #999999;
+    font-size: 12px;
+    margin-left: 10px;
+  }
+  .message{
+    color: #434a54;
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .src{
+    border: 0;
+  }
+
